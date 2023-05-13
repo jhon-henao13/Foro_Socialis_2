@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tableros css/programas.css">
+    <script src="tableros js/script.js"></script>
+    <title>Music</title>
+</head>
+<body>
+  <div id="contenedor">
+
+  <div class="logo-icon" width="50px">
+    <a href="../index.html"><img src="../images/logo-removebg.png" alt="Socialis" width="200px" height="110px"></a>
+  </div>
+  <div class="image-inicio"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzVJfsBBgz_CwoIV-73us-Bbor4NLBKfNlbw&usqp=CAU" alt="img"></div>
+  
+  <div class="textos-h1-hr">
+  <h1>Bienvenido al foro de Programas de television</h1>
+  <hr>
+  </div>  
+
+  </div>
+  <div class="nuevo-hilo">
+    
+    <button><a href="#" onclick="crearFormulario()">Comenzar nuevo debate</a></button>
+
+    <div id="formulario" style="display: none;">
+      <h2>Nuevo Debate</h2>
+      <form>
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo"><br><br>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje"></textarea><br><br>
+        
+        <label for="archivo">Archivo:</label>
+        <input type="file" id="archivo" name="archivo"><br><br>
+        
+        <button type="submit">Publicar</button>
+      </form>
+    </div>
+    
+  </div>
+    <footer class="container oculto">
+      <p>Derechos de autor © 2023 Foro de Programas y Shows. Todos los derechos </p>
+    </footer>
+</body>
+</html>

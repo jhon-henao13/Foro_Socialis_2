@@ -1,0 +1,174 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(23, 97, 66) 0%, rgb(3, 12, 9) 100%);
+    margin: auto;
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 80px;
+    }
+  
+  #contenedor {
+    position: relative;
+    margin: auto;
+    min-height: 100%;
+    padding-bottom: 20px; /* Altura del footer */
+  }
+  
+  .logo-icon {
+    position: relative;
+    z-index: 1;
+    /* Resto de estilos para el logo */
+    padding: 30px;
+    padding-top: 0;
+  }
+  
+  .image-inicio {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  
+    /* Resto de estilos para el div image-inicio */
+  }
+  
+  .image-inicio img {
+    display: block;
+    /* Resto de estilos para la imagen de inicio */
+    display: flex;
+    margin: 40px auto;
+    margin-bottom: 0;
+    border: 3px solid black;
+    margin-top: 0;
+  }
+  
+  .image-inicio h2 {
+    margin-top: 450px !important;
+  }
+  
+  .image-inicio hr {
+    margin-top: 470px !important;
+  }
+    
+  
+  h1 {
+    font-size: 25px;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0px;
+    color: rgb(253, 253, 253);
+    }
+  
+  hr {
+    border-top: 1px solid #084b26;
+    width: 85%;
+  }
+  
+  a {
+    color: #007936;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 520;
+  }
+  
+  a:hover {
+    color: #414141;
+  }
+  
+  .nuevo-hilo {
+    text-align: center;
+    
+  }
+  
+  button {
+    width: 235px;
+    height: 37px;
+    border-radius: 15px;
+    border: 2px solid black;
+  }
+  
+  
+  /* Estilos del pie de página */
+  
+  
+  #formulario {
+    text-align: center;
+    border-radius: 20px;
+    border: 5px solid rgb(0, 0, 0);
+    margin: 250px;
+    margin-top: 50px;
+  }
+  
+  #formulario button {
+    margin-bottom: 25px;
+  }
+  
+  #formulario h2 {
+    color: rgb(253, 253, 253);
+    font-size: 30px;
+    margin-top: 0;
+    background-color: #008d3f;
+    border-radius: 10px;
+  }
+  
+  form label {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .textos-h1-hr {
+    padding-top: 65px;
+  }
+  
+  .container.footer {
+    max-width: 1440px;
+    margin: auto;
+  
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px; /* Altura del footer */
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  
+  footer {
+  
+    background-color: #f7f7f7;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+    }
+  
+  .oculto {
+    display: none;
+  }
+  
+  @media (max-width: 780px) {
+    .image-inicio {
+        top: 120px;
+    }
+  
+    .textos-h1-hr {
+        padding-top: 140px;
+    }
+    
+    #formulario {
+        margin: 20px;
+        margin-bottom: 250px;
+    }
+  
+  }
