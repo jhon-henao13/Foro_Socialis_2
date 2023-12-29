@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h2>{% block title %}Actualizar una publicacion {% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+<div class="form-login">
+    <label for="title">Título:</label>
+    <input type="text" name="title" id="title" value="{{ post_tech.title }}" required><br><br>
+    
+    <label for="body">Contenido:</label>
+    <textarea name="body" id="body" cols="30" rows="10" required>{{ post_tech.body }}</textarea><br><br>
+    
+    <input type="submit" value="Publicar" style="
+    width: 150px;
+    ">
+</div>
+</form>
+{% endblock %}

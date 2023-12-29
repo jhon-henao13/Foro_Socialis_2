@@ -38,14 +38,13 @@ def register():
 
     return render_template('auth/register.html')
 
+
 # Iniciar Sesion
 @auth.route('/login', methods=('GET', 'POST'))
 def login():
-
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
-
 
         error = None
         
@@ -59,8 +58,7 @@ def login():
         if error is None:
             session.clear()
             session['user_id'] = user.id
-            return redirect(url_for('index'))
-
+            return redirect(url_for('blog.index'))
 
         flash(error)
 
@@ -79,7 +77,7 @@ def load_logged_in_user():
 @auth.route('/logout')
 def logout():
     session.clear()
-    return redirect(url_for('../Foro/index.html'))
+    return redirect(url_for('blog.index'))
 
 def login_required(view):
     @functools.wraps(view)

@@ -1,7 +1,7 @@
 from myblog import db
 
 class User(db.Model):
-    __tablename___ = 'users'
+    __tablename___ = 'user'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50))
     password = db.Column(db.Text)

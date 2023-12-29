@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}-MyBlog</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/img/blog.ico')}}" type="image/x-icon">
+    <title>{% block title %}{% endblock %}-Socialis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/musica.css')}}">
 </head>
 <body>
-    <header>
-        <div>
-            <a href="">
-        <h1>MyBlog</h1>
-            </a>
+    <header class="header">
+        <div class="nav">
+            <div>
+                <a href="{{ url_for('blog.index') }}">
+            <img src="{{ url_for('static', filename='/img/logo-removebg.png')}}" alt="Socialis" width="240px" height="130px">
+            <!-- <img src="../static/img/logo-removebg.png" alt="Socialis" width="240px" height="130px"> -->
+                </a>
+            </div>
+            <nav>
+                <a href="{{ url_for('auth.register') }}">Registrar Usuario</a>
+                <a href="{{ url_for('auth.login') }}">Iniciar Sesion</a>
+            </nav>
         </div>
-        <nav>
-            <a href="">Registrar Usuario</a>
-            <a href="">Iniciar Sesion</a>
-        </nav>
-
     </header>
 
     <section>
-        <header>{% block header %}{% endblock %}</header>
+        <div class="content">
+            <header>{% block header %}{% endblock %}</header>
 
-        {% for message in get_flashed_messages() %}
-        <div> {{ message }}</div>
-        {% endfor %}
+            {% for message in get_flashed_messages() %}
+            <div class="flash"> {{ message }}</div>
+            {% endfor %}
 
-        {% block content %}{% endblock %}
+            {% block content %}{% endblock %}
+        </div>
+
     </section>
 </body>
 </html>

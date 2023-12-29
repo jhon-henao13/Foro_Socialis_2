@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block header %}
+    
+<div class="elementos">
+    <div class="image-inicio"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnfM58AcEBHftJBmAt96r3DcReiFeycMRdnQ&usqp=CAU" width="400px" height="200px" alt="img"></div>
+    <div class="textos-h1-hr">
+        <h1>Bienvenido al foro general de Videojuegos</h1>
+        <hr>
+    </div>
+    {% if g.user %}
+    <button type="button" class="comenzar-debate" onclick="mostrarFormulario()">
+        <a>Comenzar nuevo debate o publicacion</a>
+    </button>
+    {% endif %}
+</div>
+<script>
+    function mostrarFormulario() {
+      var formulario = document.getElementById("formulario")
+  
+      if (formulario.style.display === "none") {
+        formulario.style.display = "block"
+      } else {
+        formulario.style.display = "none"
+      }
+
+    }
+  </script>    
+{% endblock %}
+
+{% block content %}
+{% if g.user %}
+<div id="formulario">
+<form method="POST">
+    <h2>{% block title %}Crear una publicacion {% endblock %}</h2>
+
+    <div class="title-body-button">
+    <label for="title">Título:</label>
+    <input type="text" name="title" id="title" required><br><br>
+    
+    <label for="body">Contenido:</label>
+    <textarea name="body" id="body" cols="30" rows="5" required></textarea><br><br>
+    
+    <button><input type="submit" value="Publicar"></button>
+    </div>
+
+</form>
+</div>
+{% endif %}
+{% for post_vrandom in posts_vrandom %}
+<div class="content-post">
+    <article>
+        <header style="
+            margin: 10px 0;
+            display: flex;
+            align-self: center;
+            justify-content: space-between;
+        ">
+            <div>
+                <h1>{{ post_vrandom.title }}</h1>
+                    <div class="about">
+                        Publicado por {{ get_user(post_vrandom.author).username}}
+                        el {{ post_vrandom.created.strftime('%Y-%m-%d') }}
+                    </div>
+            </div>
+            <div class="eliminar-post">
+                {% if g.user.id == post_vrandom.author %}
+                    <a href="{{ url_for('blog.updateVrandom', id=post_vrandom.id) }}">Editar</a>
+                    <a href="{{ url_for('blog.deleteVrandom', id=post_vrandom.id) }}">Eliminar</a>
+                {% endif %}
+            </div>
+        </header>
+        <div>
+            <p>{{ post_vrandom.body }}</p>
+        </div>
+    </article>
+</div>
+{% endfor %}
+
+{% endblock %}

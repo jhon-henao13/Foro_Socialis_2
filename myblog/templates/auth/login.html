@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
+
 {% block header %}
     <h2>{% block title %}Iniciar Sesion {% endblock %}</h2>
 {% endblock %}
 
 {% block content %}
 <form method="POST">
+<div class="form-login">
     <label for="username">Nombre de usuario</label>
     <input type="text" name="username" id="username" required>
     <label for="password">Contraseña</label>
     <input type="password" name="password" id="password" required>
-    <input type="submit", value="Iniciar Sesion">
+    <input type="submit", value="Iniciar Sesion" style="
+        width: 150px;
+    ">
+</div>
 </form>
 {% endblock %}

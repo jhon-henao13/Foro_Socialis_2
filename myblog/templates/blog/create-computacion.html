@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block header %}
+    
+<div class="elementos">
+    <div class="image-inicio"><img src="data:image/jpeg;base64,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" width="400px" height="200px" alt="img"></div>
+    <div class="textos-h1-hr">
+        <h1>Bienvenido al foro de Computacion</h1>
+        <hr>
+    </div>
+    {% if g.user %}
+    <button type="button" class="comenzar-debate" onclick="mostrarFormulario()">
+        <a>Comenzar nuevo debate o publicacion</a>
+    </button>
+    {% endif %}
+</div>
+<script>
+    function mostrarFormulario() {
+      var formulario = document.getElementById("formulario")
+  
+      if (formulario.style.display === "none") {
+        formulario.style.display = "block"
+      } else {
+        formulario.style.display = "none"
+      }
+
+    }
+  </script>    
+{% endblock %}
+
+{% block content %}
+{% if g.user %}
+<div id="formulario">
+<form method="POST">
+    <h2>{% block title %}Crear una publicacion {% endblock %}</h2>
+
+    <div class="title-body-button">
+    <label for="title">Título:</label>
+    <input type="text" name="title" id="title" required><br><br>
+    
+    <label for="body">Contenido:</label>
+    <textarea name="body" id="body" cols="30" rows="5" required></textarea><br><br>
+    
+    <button><input type="submit" value="Publicar"></button>
+    </div>
+
+</form>
+</div>
+{% endif %}
+{% for post_computacion in posts_computacion %}
+<div class="content-post">
+    <article>
+        <header style="
+            margin: 10px 0;
+            display: flex;
+            align-self: center;
+            justify-content: space-between;
+        ">
+            <div>
+                <h1>{{ post_computacion.title }}</h1>
+                    <div class="about">
+                        Publicado por {{ get_user(post_computacion.author).username}}
+                        el {{ post_computacion.created.strftime('%Y-%m-%d') }}
+                    </div>
+            </div>
+            <div class="eliminar-post">
+                {% if g.user.id == post_computacion.author %}
+                    <a href="{{ url_for('blog.updateComputacion', id=post_computacion.id) }}">Editar</a>
+                    <a href="{{ url_for('blog.deleteComputacion', id=post_computacion.id) }}">Eliminar</a>
+                {% endif %}
+            </div>
+        </header>
+        <div>
+            <p>{{ post_computacion.body }}</p>
+        </div>
+    </article>
+</div>
+{% endfor %}
+
+{% endblock %}

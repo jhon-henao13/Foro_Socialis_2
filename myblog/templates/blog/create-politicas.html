@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block header %}
+    
+<div class="elementos">
+    <div class="image-inicio"><img src="data:image/jpeg;base64,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" width="400px" height="200px" alt="img"></div>
+    <div class="textos-h1-hr">
+        <h1>Bienvenido al foro de las Ciencias Politicas</h1>
+        <hr>
+    </div>
+    {% if g.user %}
+    <button type="button" class="comenzar-debate" onclick="mostrarFormulario()">
+        <a>Comenzar nuevo debate o publicacion</a>
+    </button>
+    {% endif %}
+</div>
+<script>
+    function mostrarFormulario() {
+      var formulario = document.getElementById("formulario")
+  
+      if (formulario.style.display === "none") {
+        formulario.style.display = "block"
+      } else {
+        formulario.style.display = "none"
+      }
+
+    }
+  </script>    
+{% endblock %}
+
+{% block content %}
+{% if g.user %}
+<div id="formulario">
+<form method="POST">
+    <h2>{% block title %}Crear una publicacion {% endblock %}</h2>
+
+    <div class="title-body-button">
+    <label for="title">Título:</label>
+    <input type="text" name="title" id="title" required><br><br>
+    
+    <label for="body">Contenido:</label>
+    <textarea name="body" id="body" cols="30" rows="5" required></textarea><br><br>
+    
+    <button><input type="submit" value="Publicar"></button>
+    </div>
+
+</form>
+</div>
+{% endif %}
+{% for post_politicas in posts_politicas %}
+<div class="content-post">
+    <article>
+        <header style="
+            margin: 10px 0;
+            display: flex;
+            align-self: center;
+            justify-content: space-between;
+        ">
+            <div>
+                <h1>{{ post_politicas.title }}</h1>
+                    <div class="about">
+                        Publicado por {{ get_user(post_politicas.author).username}}
+                        el {{ post_politicas.created.strftime('%Y-%m-%d') }}
+                    </div>
+            </div>
+            <div class="eliminar-post">
+                {% if g.user.id == post_politicas.author %}
+                    <a href="{{ url_for('blog.updatePoliticas', id=post_politicas.id) }}">Editar</a>
+                    <a href="{{ url_for('blog.deletePoliticas', id=post_politicas.id) }}">Eliminar</a>
+                {% endif %}
+            </div>
+        </header>
+        <div>
+            <p>{{ post_politicas.body }}</p>
+        </div>
+    </article>
+</div>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/img/blog.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/estilos.css')}}">
+    <link rel="icon" href="images/icono.png" type="image/x-icon">
+    <title>Socialis</title>
+</head>
+<body>
+<div id="all-sections">
+    <div class="logo-principal"><img src="{{ url_for('static', filename='/img/logo-removebg.png')}}" alt="logo"></div>
+
+    <div class="socialis-info">
+    <div class="h2-info">
+    <nav class="nav-user">
+        {% if g.user %}
+        <img src="{{ url_for('static', filename='/img/user.ico')}}" alt="user">
+        <span>{{ g.user.username }}:</span>
+        <a href="{{ url_for('auth.logout') }}">Cerrar sesion</a>
+        {% else %}
+        {% endif %}
+    </nav>
+    <h2>Bienvenido al foro de discusiones "Socialis"</h2>
+</div>
+    <p>Este foro es para aquellas personas que quieren debatir acerca de sus gustos y desean saber curiosidades sobre x peliculas, series, programas, libros, etc. Ademas, hay varias secciones donde puedes encontrar casi de todo, encuentra algo que al menos te interese saber o que sea para ti, INFORMATE  Y  INFORMA  A  LOS  DEMAS!</p>
+    </div>
+
+    <div class="listado-de-tableros">
+    
+    <p class="p-tablero">Aqui dejo un listado de algunos intereses: </p>
+
+    <div class="las-columnas">
+    <div class="columna-1">
+        <p>ENTRETENIMIENTO</p>
+        <ol>
+            <section class="musica"><li><a href="tableros/musica">Musica</a></li></section>
+            <section class="programas-tv"><li><a href="tableros/programas">Programas/TV</a></li></section>
+            <section class="peliculas"><li><a href="tableros/peliculas">Peliculas</a></li></section>
+            <section class="series-netflix"><li><a href="tableros/netflix">Series de plataformas en linea (Netflix)</a></li></section>
+            <section class="series-hbo"><li><a href="tableros/hbo">Series de plataformas en linea (HBO Max)</a></li></section>
+            <section class="comics"><li><a href="tableros/comics">Comics</a></li></section>
+            <section class="tecnologia"><li><a href="tableros/tech">Tecnologia</a></li></section>
+        </ol>
+    </div>
+    <div class="columna-2">
+        <p>APRENDIZAJE</p>
+        <ol>
+            <section class="literatura"><li><a href="tableros/literatura">Literatura</a></li></section>
+            <section class="math"><li><a href="tableros/math">Matematicas</a></li></section>
+            <section class="c-biologicas"><li><a href="tableros/biologicas">Ciencias biologicas</a></li></section>
+            <section class="c-politicas"><li><a href="tableros/politicas">Ciencias politicas</a></li></section>
+            <section class="computacion"><li><a href="tableros/computacion">Computacion</a></li></section>
+            <section class="programacion"><li><a href="tableros/programacion">Programacion</a></li></section>
+            <section class="ciberseguridad"><li><a href="tableros/ciberseguridad">Ciberseguridad</a></li></section>
+            <section class="quimica"><li><a href="tableros/quimica">Quimica</a></li></section>
+            <section class="artes"><li><a href="tableros/artes">Artes</a></li></section>
+        </ol>
+    </div>
+    <div class="columna-3">
+        <p>VIDEOJUEGOS</p>
+        <ol>
+            <section class="v-random"><li><a href="tableros/v-random">VideoJuegos / Random</a></li></section>
+            <section class="v-indie"><li><a href="tableros/v-indie">Videojuegos Indie</a></li></section>
+            <section class="v-multiplayer"><li><a href="tableros/v-online">Videojuegos Multiplayer</a></li></section>
+            <section class="v-mobile"><li><a href="tableros/v-mobile">Videojuegos Mobile</a></li></section>
+            <section class="v-estrategia"><li><a href="tableros/v-estrategia">Videojuegos de Estrategia</a></li></section>
+            <section class="v-noticias"><li><a href="tableros/v-noticias">Noticiero de los VideoJuegos</a></li></section>
+        </ol>
+    </div>
+    </div>
+
+ </div>
+ 
+</div>
+
+<div class="footer-principal">
+  <div class="links-container">
+    <!-- <a href="#">Link 1</a> -->
+    <a href="#">Instagram</a>
+    <!-- <a href="#">Link 3</a> -->
+  </div>
+  <p>©Socialis2023 v1.0</p>
+</div>
+
+    
+
+
+</html>
